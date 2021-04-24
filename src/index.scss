@@ -1,0 +1,63 @@
+// @font-face {
+//   font-family: "Lobster";
+//   src: url("/src/assets/fonts/Lobster/Lobster-Regular.ttf") format("truetype");
+// }
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+// @font-face {
+//   font-family: "Roboto";
+//   src: url("/src/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+// }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$themeLight: orange;
+$themeDark: black;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  background-color: antiquewhite;
+}
+.announcementbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $themeDark;
+  &__text {
+    color: $themeLight;
+  }
+  &__text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+header {
+  width: 100%;
+  .header__logo {
+    width: 5%;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__crown {
+      display: flex;
+      &--left {
+        height: 7.5px;
+        border-top: solid 10px transparent;
+        border-left: solid 10px $themeLight;
+        border-right: solid 10px $themeLight;
+      }
+      &--right {
+        height: 7.5px;
+        border-top: solid 10px transparent;
+        border-left: solid 10px $themeLight;
+        border-right: solid 10px $themeLight;
+      }
+    }
+    &__initial {
+      color: $themeDark;
+      font-family: Lobster;
+      font-size: 30px;
+    }
+  }
+}
