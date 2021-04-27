@@ -2,41 +2,60 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Shikai Wang ---- Steven's Personal Website</title>
+    <link rel="icon" href="../src/assets/images/logo.jpg">
+    <title>Shikai Wang - Steven's Personal Website</title>
     <link rel="stylesheet" href="../src/index.css">
   </head>
   <body>
+    <div class="subscription">
+      <div class="subscription__popup">
+        <div class="subscription__popup__cross" onclick="handleClose('subscription')">
+          
+        </div>
+      </div>
+
+      <div class="subscription__overlaywindow">
+      </div>
+    </div>
+
     <div class="announcementbar">
-      <div class="announcementbar__text">
+      <div class="announcementbar__text" onclick="handlePopup('subscription')">
         Subscribe Now for a Specialised Discount!
       </div>
     </div>
+
     <header>
       <div class="header__logo">
         <div class="header__logo__crown">
           <div class="header__logo__crown--left">
 
           </div>
+
           <div class="header__logo__crown--right">
 
           </div>
         </div>
+
         <div class="header__logo__initial">
           S
         </div>
       </div>
+
       <nav>
       </nav>
       <div class="header__avatar">
 
       </div>
     </header>
+
     <main>
 
     </main>
+
     <footer>
 
     </footer>
+
     <script type="text/javascript" src="../src/index.js"></script>
   </body>
 </html>

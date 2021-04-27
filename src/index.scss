@@ -10,43 +10,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 $themeLight: orange;
 $themeDark: black;
+
 body {
   margin: 0;
   padding: 0;
   font-family: Roboto;
   background-color: antiquewhite;
 }
-.announcementbar {
+
+.subscription {
   width: 100%;
+  height: 100%;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__popup {
+    width: 350px;
+    height: 75%;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+
+    &__cross::before {
+      content: "x";
+    }
+  }
+
+  &__overlaywindow {
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    background-color: grey;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.announcementbar {
   display: flex;
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: $themeDark;
+
   &__text {
     color: $themeLight;
   }
+
   &__text:hover {
     cursor: pointer;
     text-decoration: underline;
   }
 }
+
 header {
-  width: 100%;
+
   .header__logo {
-    width: 5%;
+    width: 50px;
+    padding: 5px;
     border: solid 2px black;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &__crown {
       display: flex;
+
       &--left {
         height: 7.5px;
         border-top: solid 10px transparent;
         border-left: solid 10px $themeLight;
         border-right: solid 10px $themeLight;
       }
+
       &--right {
         height: 7.5px;
         border-top: solid 10px transparent;
@@ -54,6 +99,7 @@ header {
         border-right: solid 10px $themeLight;
       }
     }
+
     &__initial {
       color: $themeDark;
       font-family: Lobster;
