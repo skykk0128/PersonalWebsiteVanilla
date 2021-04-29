@@ -17,14 +17,58 @@ body {
   align-items: center;
 }
 .subscription__popup {
-  width: 350px;
-  height: 75%;
+  width: 800px;
   position: absolute;
   background-color: white;
+  display: flex;
+  justify-content: space-between;
   z-index: 1;
 }
-.subscription__popup__cross::before {
-  content: "x";
+.subscription__popup__image {
+  width: 300px;
+  background-color: orange;
+}
+.subscription__popup__formcontainer {
+  width: 450px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.subscription__popup__formcontainer form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.subscription__popup__formcontainer form label {
+  font-size: 30px;
+  color: orange;
+}
+.subscription__popup__formcontainer form input {
+  padding: 15px;
+  font-size: 20px;
+}
+.subscription__popup__formcontainer form input:focus {
+  border: solid 2px orange;
+  outline: 0;
+  box-shadow: 0 0 5px white, 0 0 5px orange;
+}
+.subscription__popup__formcontainer form input:focus::placeholder {
+  color: transparent;
+}
+.subscription__popup__formcontainer form button {
+  background-color: orange;
+  border-color: orange;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  cursor: pointer;
+}
+.subscription__popup__cross {
+  width: 15px;
+  height: 25px;
+  margin-right: 5px;
+  font-size: 25px;
+  cursor: pointer;
 }
 .subscription__overlaywindow {
   width: 100%;

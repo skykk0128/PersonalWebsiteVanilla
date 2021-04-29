@@ -8,6 +8,9 @@
 //   src: url("/src/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 // }
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$baseColour: white;
+$backgroundColour: antiquewhite;
+$transparentColour: transparent;
 $themeLight: orange;
 $themeDark: black;
 
@@ -15,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Roboto;
-  background-color: antiquewhite;
+  background-color: $backgroundColour;
 }
 
 .subscription {
@@ -28,14 +31,66 @@ body {
   align-items: center;
 
   &__popup {
-    width: 350px;
-    height: 75%;
+    width: 800px;
     position: absolute;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
     z-index: 1;
 
-    &__cross::before {
-      content: "x";
+    &__image {
+      width: 300px;
+      background-color: $themeLight;
+    }
+
+    &__formcontainer {
+      width: 450px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        label {
+          font-size: 30px;
+          color: $themeLight;
+        }
+
+        input {
+          padding: 15px;
+          font-size: 20px;
+        }
+
+        input:focus {
+          border: solid 2px $themeLight;
+          outline: 0;
+          box-shadow: 0 0 5px $baseColour, 0 0 5px $themeLight;
+        }
+
+        input:focus::placeholder {
+          color: $transparentColour;
+        }
+
+        button {
+          background-color: $themeLight;
+          border-color: $themeLight;
+          color: $baseColour;
+          font-size: 20px;
+          padding: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__cross {
+      width: 15px;
+      height: 25px;
+      margin-right: 5px;
+      font-size: 25px;
+      cursor: pointer;
     }
   }
 
@@ -87,14 +142,14 @@ header {
 
       &--left {
         height: 7.5px;
-        border-top: solid 10px transparent;
+        border-top: solid 10px $transparentColour;
         border-left: solid 10px $themeLight;
         border-right: solid 10px $themeLight;
       }
 
       &--right {
         height: 7.5px;
-        border-top: solid 10px transparent;
+        border-top: solid 10px $transparentColour;
         border-left: solid 10px $themeLight;
         border-right: solid 10px $themeLight;
       }

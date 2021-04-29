@@ -9,8 +9,28 @@
   <body>
     <div class="subscription">
       <div class="subscription__popup">
-        <div class="subscription__popup__cross" onclick="handleClose('subscription')">
+        <div class="subscription__popup__image">
           
+        </div>
+
+        <div class="subscription__popup__formcontainer">
+          <h2>Subscribe now with your email so that you will not miss any updates!</h2>
+
+          <form>
+            <label>Email:</label>
+
+            <br>
+
+            <input type="email" name="email" placeholder="Enter your email here" id="email" />
+
+            <br>
+
+            <button type="button" onclick="subscribeEmail()">Subscribe Now</button>
+          </form>
+        </div>
+
+        <div class="subscription__popup__cross" onclick="handleClose('subscription')">
+          X
         </div>
       </div>
 
@@ -20,7 +40,7 @@
 
     <div class="announcementbar">
       <div class="announcementbar__text" onclick="handlePopup('subscription')">
-        Subscribe Now for a Specialised Discount!
+        Subscribe Now for a Special Discount!
       </div>
     </div>
 
