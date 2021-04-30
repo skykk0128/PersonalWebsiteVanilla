@@ -2,9 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="../src/assets/images/logo.jpg">
+<!--     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> -->
+    <link rel="icon" href="../src/assets/images/logo.jpg" />
     <title>Shikai Wang - Steven's Personal Website</title>
     <link rel="stylesheet" href="../src/index.css">
+<!--     <script type="text/javascript" src="../src/index.js"></script> -->
   </head>
   <body>
     <div class="subscription">
@@ -15,6 +17,8 @@
 
         <div class="subscription__popup__formcontainer">
           <h2>Subscribe now with your email so that you will not miss any updates!</h2>
+
+          <h4>A 10% discount voucher code will be send to your email once subscribed.</h4>
 
           <form>
             <label>Email:</label>
@@ -62,9 +66,26 @@
       </div>
 
       <nav>
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Resume</a></li>
+          <li><a>Services</a></li>
+          <li><a>Projects</a></li>
+          <li><a>Blogs</a></li>
+          <li><a>Contact</a></li>
+        </ul>
       </nav>
-      <div class="header__avatar">
-
+      <div class="header__user">
+        <div class="header__user__login">
+          <button class="button__login--dark">Sign In </button>
+        </div>
+        <div class="header__user__register">
+          <button class="button__register--light">Register Now</button>
+        </div>
+      </div>
+      <div class="header__avatar" id="target">
+        <img alt="avatar" src="/src/assets/svgs/icon_avatar/aquaman.svg" onclick="randomAvatar()" id="avatar" />
       </div>
     </header>
 
@@ -75,7 +96,6 @@
     <footer>
 
     </footer>
-
     <script type="text/javascript" src="../src/index.js"></script>
   </body>
 </html>

@@ -94,19 +94,34 @@ body {
 }
 .announcementbar__text {
   color: orange;
+  animation: 20s linear 1s infinite alternate textslide;
+}
+@keyframes textslide {
+  from {
+    margin-left: -80%;
+  }
+  to {
+    margin-left: 80%;
+  }
 }
 .announcementbar__text:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
 header .header__logo {
   width: 50px;
   padding: 5px;
-  border: solid 2px black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 header .header__logo__crown {
   display: flex;
@@ -127,6 +142,61 @@ header .header__logo__initial {
   color: black;
   font-family: Lobster;
   font-size: 30px;
+}
+header nav {
+  width: 800px;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li > a {
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+header nav ul li > a:hover {
+  color: orange;
+  border-bottom: solid orange;
+}
+header .header__user {
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .header__user button {
+  width: 150px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+header .header__user .button__login--dark {
+  background-color: black;
+  color: orange;
+  border-color: black;
+}
+header .header__user .button__login--dark:hover {
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+header .header__user .button__register--light {
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+header .header__user .button__register--light:hover {
+  background-color: black;
+  color: orange;
+  border-color: black;
+}
+header .header__avatar {
+  width: 50px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
