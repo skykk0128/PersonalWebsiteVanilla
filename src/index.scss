@@ -8,13 +8,44 @@
 //   src: url("/src/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 // }
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+// sass --watch ./src/index.scss ./src/index.css
+// Colour variables
 $alertColour: red;
 $backgroundColour: antiquewhite;
 $baseColour: white;
 $themeDark: black;
 $themeLight: orange;
 $transparentColour: transparent;
+
+// Size variables
+$SM: 414px;
+$MD: 768px;
+$LG: 1024px;
+$XL: 1366px;
+
+// Responsive Design Definition
+@mixin MQ($canvas) {
+  @if $canvas==SM {
+    @media screen and (max-width: $SM) {
+      @content;
+    }
+  }
+  @else if $canvas==MD {
+    @media screen and (min-width: $SM) and (max-width: $MD - 16) {
+      @content;
+    }
+  }
+  @else if $canvas==LG {
+    @media screen and (min-width: $MD) and (max-width: $LG - 16) {
+      @content;
+    }
+  }
+  @else if $canvas==XL {
+    @media screen and (min-width: $LG) {
+      @content;
+    }
+  }
+}
 
 body {
   margin: 0;
@@ -25,9 +56,12 @@ body {
 
 .popup {
   &__container__subscription {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
     display: none;
   }
 
@@ -37,7 +71,6 @@ body {
     background-color: $baseColour;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
 
     &__image {
       width: 300px;
@@ -108,9 +141,12 @@ body {
   }
 
   &__container__login {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
     display: none;
   }
 
@@ -183,9 +219,12 @@ body {
   }
 
   &__container__register {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
     display: none;
   }
 

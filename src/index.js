@@ -12,6 +12,11 @@ const handleClose = (element) => {
 	document.getElementById("email__error").style.visibility = "hidden";
 	document.getElementById("login__email__error").style.visibility = "hidden";
 	document.getElementById("login__password__error").style.visibility = "hidden";
+	document.getElementById("register__name__error").style.visibility = "hidden";
+	document.getElementById("register__username__error").style.visibility = "hidden";
+	document.getElementById("register__email__error").style.visibility = "hidden";
+	document.getElementById("register__password__error").style.visibility = "hidden";
+	document.getElementById("confirm__password__error").style.visibility = "hidden";
 }
 
 // Send Subscription to Email
