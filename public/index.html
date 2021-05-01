@@ -6,65 +6,238 @@
     <title>Shikai Wang - Steven's Personal Website</title>
     <link rel="stylesheet" href="../src/index.css">
   </head>
+
   <body>
-    <div class="subscription">
-      <div class="subscription__popup">
-        <div class="subscription__popup__image">
+
+    <!-- Popup Section -->
+    <div class="popup__container__subscription">
+
+      <!-- Popup Subscription Window -->
+      <div class="popup__subscription">
+
+        <!-- Left Side Image -->
+        <div class="popup__subscription__image">
           
         </div>
 
-        <div class="subscription__popup__formcontainer">
+        <!-- Subscription Form Container -->
+        <div class="popup__subscription__formcontainer">
+
+          <!-- Container Title -->
           <h2>Subscribe now with your email so that you will not miss any updates!</h2>
 
+          <!-- Container Subtitle -->
           <h4>A 10% discount voucher code will be send to your email once subscribed.</h4>
 
-          <form>
+          <!-- Form -->
+          <form name="subscription">
+
+            <!-- Email Label -->
             <label>Email:</label>
 
             <br>
 
+            <!-- Email Input -->
             <input type="email" name="email" placeholder="Enter your email here" id="email" />
+
+            <!-- Email Input Validation -->
+            <div class="popup__subscription__formcontainer__error" id="email__error">
+              * Please enter your email address to subscribe!
+            </div>
 
             <br>
 
+            <!-- Subscribe Button -->
             <button type="button" onclick="subscribeEmail()">Subscribe Now</button>
           </form>
         </div>
 
-        <div class="subscription__popup__cross" onclick="handleClose('subscription')">
+        <!-- Popup Close Button -->
+        <div class="popup__subscription__cross" onclick="handleClose('popup__container__subscription')">
           X
         </div>
       </div>
 
-      <div class="subscription__overlaywindow">
-      </div>
+      <!-- Popup Overlay Background -->
+      <div class="popup__overlaywindow"></div>
     </div>
 
+    <!-- Login Popup Window -->
+    <div class="popup__container__login">
+
+      <!-- Popup Login Window -->
+      <div class="popup__login">
+
+        <!-- Login Form Container -->
+        <div class="popup__login__formcontainer">
+
+          <!-- Container Title -->
+          <h2>Sign In Now</h2>
+
+          <!-- Container Subtitle -->
+          <h4>Let's start learning!</h4>
+
+          <!-- Form -->
+          <form name="login">
+
+            <!-- Email Label -->
+            <label>Email:</label>
+
+            <!-- Email Input -->
+            <input type="email" name="loginemail" placeholder="Enter your email here" id="login__email" />
+
+            <!-- Email Input Validation -->
+            <div class="popup__login__formcontainer__error" id="login__email__error">
+              * Email address should not be empty. Please enter your email address!
+            </div>
+
+            <!-- Password Label -->
+            <label>Password:</label>
+
+            <!-- Password Input -->
+            <input type="password" name="loginpassword" placeholder="Enter your password here" id="login__password" />
+
+            <!-- Password Input Validation -->
+            <div class="popup__login__formcontainer__error" id="login__password__error">
+              * Password should not be empty. Please enter your password!
+            </div>
+
+            <!-- Login Button -->
+            <button type="button" onclick="handleLoginEmpty()">Sign In Now</button>
+          </form>
+        </div>
+
+        <!-- Popup Close Button -->
+        <div class="popup__login__cross" onclick="handleClose('popup__container__login')">
+          X
+        </div>
+      </div>
+
+      <!-- Popup Overlay Background -->
+      <div class="popup__overlaywindow"></div>
+    </div>
+
+    <!-- Register Popup Window -->
+    <div class="popup__container__register">
+
+      <!-- Popup Register Window -->
+      <div class="popup__register">
+
+        <!-- Register Form Container -->
+        <div class="popup__register__formcontainer">
+
+          <!-- Container Title -->
+          <h2>Register Now</h2>
+
+          <!-- Container Subtitle -->
+          <h4>Sign up now and get access to various materials!</h4>
+
+          <!-- Form -->
+          <form name="register">
+
+            <!-- Name Label -->
+            <label>Name:</label>
+
+            <!-- Name Input -->
+            <input type="name" name="registername" placeholder="Enter your name here" id="register__name" />
+
+            <!-- Name Input Validation -->
+            <div class="popup__register__formcontainer__error" id="register__name__error">
+              * Name should not be empty. Please enter your name!
+            </div>
+
+            <!-- Username Label -->
+            <label>Username:</label>
+
+            <!-- Username Input -->
+            <input type="username" name="registerusername" placeholder="Enter your username here" id="register__username" />
+
+            <!-- Username Input Validation -->
+            <div class="popup__register__formcontainer__error" id="register__username__error">
+              * Username should not be empty. Please enter your username!
+            </div>
+
+            <!-- Email Label -->
+            <label>Email:</label>
+
+            <!-- Email Input -->
+            <input type="email" name="registeremail" placeholder="Enter your email here" id="register__email" />
+
+            <!-- Email Input Validation -->
+            <div class="popup__register__formcontainer__error" id="register__email__error">
+              * Email address should not be empty. Please enter your email address!
+            </div>
+
+            <!-- Password Label -->
+            <label>Password:</label>
+
+            <!-- Password Input -->
+            <input type="password" name="registerpassword" placeholder="Enter your password here" id="register__password" />
+
+            <!-- Password Input Validation -->
+            <div class="popup__register__formcontainer__error" id="register__password__error">
+              * Password should not be empty. Please enter your password!
+            </div>
+
+            <!-- Confirm Password Label -->
+            <label>Confirm Password:</label>
+
+            <!-- Confirm Password Input -->
+            <input type="password" name="confirmpassword" placeholder="Confirm your password here" id="confirm__password" />
+
+            <!-- Confirm Password Input Validation -->
+            <div class="popup__register__formcontainer__error" id="confirm__password__error">
+              * This field should not be empty. Please confirm your password!
+            </div>
+
+            <!-- Register Button -->
+            <button type="button" onclick="handleRegisterEmpty()">Sign Up Now</button>
+          </form>
+        </div>
+
+        <!-- Popup Close Button -->
+        <div class="popup__register__cross" onclick="handleClose('popup__container__register')">
+          X
+        </div>
+      </div>
+
+      <!-- Popup Overlay Background -->
+      <div class="popup__overlaywindow"></div>
+    </div>
+
+     <!-- Announcement Bar -->
     <div class="announcementbar">
-      <div class="announcementbar__text" onclick="handlePopup('subscription')">
+
+      <!-- Announcement Text -->
+      <div class="announcementbar__text" onclick="handlePopup('popup__container__subscription')">
         Subscribe Now for a Special Discount!
       </div>
     </div>
 
+    <!-- Header -->
     <header>
+
+      <!-- Header Logo -->
       <div class="header__logo">
+
+        <!-- Logo Top Part -->
         <div class="header__logo__crown">
-          <div class="header__logo__crown--left">
+          <div class="header__logo__crown--left"></div>
 
-          </div>
-
-          <div class="header__logo__crown--right">
-
-          </div>
+          <div class="header__logo__crown--right"></div>
         </div>
 
+        <!-- Logo Buttom Part -->
         <div class="header__logo__initial">
           S
         </div>
       </div>
 
+      <!-- Header Navbar -->
       <nav>
+        <!-- Navbar Menu -->
         <ul>
+          <!-- Navbar Items -->
           <li><a>Home</a></li>
           <li><a>About</a></li>
           <li><a>Resume</a></li>
@@ -74,25 +247,48 @@
           <li><a>Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Header User Administration -->
       <div class="header__user">
+
+        <!-- Login Section -->
         <div class="header__user__login">
-          <button class="button__login--dark">Sign In </button>
+          <button class="button__login--dark" onclick="handlePopup('popup__container__login')">
+            Sign In
+          </button>
         </div>
+
+        <!-- Register Section -->
         <div class="header__user__register">
-          <button class="button__register--light">Register Now</button>
+          <button class="button__register--light" onclick="handlePopup('popup__container__register')">
+            Register Now
+          </button>
         </div>
       </div>
+
+      <!-- Header Avatar -->
       <div class="header__avatar" id="target">
         <img alt="avatar" src="/src/assets/svgs/icon_avatar/aquaman.svg" onclick="randomAvatar()" id="avatar" />
       </div>
     </header>
 
+    <!-- Main Body -->
     <main>
 
     </main>
 
+    <!-- Footer -->
     <footer>
 
+      <!-- Footer Navigation -->
+      <div class="footer__navigations">
+        
+      </div>
+
+      <!-- Footer Copyright -->
+      <div class="footer__copyright">
+        
+      </div>
     </footer>
     <script type="text/javascript" src="../src/index.js"></script>
   </body>
