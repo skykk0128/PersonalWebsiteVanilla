@@ -9,6 +9,9 @@ const handleClose = (element) => {
 	const popupWindow = document.getElementsByClassName(element)[0];
 	popupWindow.classList.add("hidden");
 	popupWindow.classList.remove("show");
+	document.getElementById("subscription").reset();
+	document.getElementById("login").reset();
+	document.getElementById("register").reset();
 	document.getElementById("email__error").style.visibility = "hidden";
 	document.getElementById("login__email__error").style.visibility = "hidden";
 	document.getElementById("login__password__error").style.visibility = "hidden";
